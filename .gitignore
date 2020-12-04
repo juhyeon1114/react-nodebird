@@ -1,0 +1,13 @@
+node_modules
+node_modules/
+dist
+dist/
+.env
+*.png
+*.jpg
+uploads
+uploads/
+*.pem
+*.ppk
+.next
+.next/
