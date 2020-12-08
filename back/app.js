@@ -70,6 +70,11 @@ app.use(session({
     saveUninitialized: false,
     resave: false,
     secret: process.env.COOKIE_SECRET, // 로그인 토큰만들 때, 사용하는 키
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        domain: process.env.NODE_ENV === 'production' && '.nodebird.com' 
+    }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
